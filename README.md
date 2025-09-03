@@ -8,6 +8,7 @@ It’s designed for **finance professionals** and **Fabric beginners** — no ad
 ## 📂 Dataset  
 
 **Transactions (Sheet 1)**  
+
 | Date       | Category | Amount |
 |------------|----------|--------|
 | 2025-01-31 | Revenue  | 50,000 |
@@ -18,6 +19,7 @@ It’s designed for **finance professionals** and **Fabric beginners** — no ad
 | 2025-02-28 | Expense  | 13,200 |
 
 **Budget (Sheet 2)**  
+
 | Month    | RevenueBudget | ExpenseBudget |
 |----------|---------------|---------------|
 | Jan 2025 | 52,000        | 12,000        |
@@ -28,21 +30,23 @@ It’s designed for **finance professionals** and **Fabric beginners** — no ad
 
 ## 🛠️ Demos  
 
-1️⃣ **End-of-Month Automation (No Code)**  
+### 1️⃣ End-of-Month Automation (No Code)  
 - Upload Excel → OneDrive → OneLake  
 - Create pipeline → schedule refresh on 1st → send Teams alert  
 - ✅ 100% clicks, no coding  
 
-2️⃣# 📊 Budget vs Actual (DAX)
+---
+
+### 2️⃣ 📊 Budget vs Actual (DAX)  
 
 ```dax
 Month = FORMAT(Transactions[Date], "MMM YYYY")
 TotalRevenue = SUM(Transactions[Amount])
 RevenueVariance = [TotalRevenue] - SUM(Budget[RevenueBudget])
 
+📸 Placeholder for chart:
 
-3️⃣ Month-over-Month Growth (DAX)
-
+3️⃣ 📈 Month-over-Month Growth (DAX)
 RevenueMoM =
 DIVIDE(
     SUM(Transactions[Amount]) 
@@ -50,7 +54,9 @@ DIVIDE(
     CALCULATE(SUM(Transactions[Amount]), PREVIOUSMONTH(Transactions[Date]))
 )
 
-4️⃣ SQL – Monthly Aggregation
+📸 Placeholder for chart:
+
+4️⃣ 🗄️ SQL – Monthly Aggregation
 
 SELECT 
     FORMAT(Date,'yyyy-MM') AS Month,
@@ -60,9 +66,9 @@ FROM Transactions
 GROUP BY FORMAT(Date,'yyyy-MM'), Category
 ORDER BY Month, Category;
 
+📸 Placeholder for chart:
 
-
-5️⃣ Notebook – Budget vs Actual (Python)
+5️⃣ 📓 Notebook – Budget vs Actual (Python)
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -81,6 +87,18 @@ plt.bar(df['Month'], df['Amount'], alpha=0.5, label='Actual')
 plt.title('Revenue: Budget vs Actual')
 plt.legend()
 plt.show()
+
+📸 Placeholder for chart:
+
+
+📊 Final Visual Outputs
+Revenue vs Budget → images/revenue_vs_budget.png
+Expense vs Budget → images/expense_vs_budget.png
+MoM Growth % → images/mom_growth.png
+SQL Aggregation → images/sql_output.png
+Notebook Output → images/notebook_budget_vs_actual.png
+
+👨‍💻 Created by: Olufemi Olamoyegun, FMVA®
 
 
 
