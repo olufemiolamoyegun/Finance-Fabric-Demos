@@ -1,3 +1,17 @@
+🔹 1. Getting Started Section
+## 🚀 Getting Started  
+
+To try these demos, you’ll need:  
+- A Microsoft Fabric (or Power BI) account  
+- Basic familiarity with uploading datasets into OneLake / Workspaces  
+- The sample dataset: `FinanceDemo.xlsx` (included in this repo)  
+
+### Steps  
+1. Clone or download this repo  
+2. Upload `FinanceDemo.xlsx` to your Fabric workspace or OneLake  
+3. Pick a demo (DAX, SQL, or Notebook) and run the code snippets  
+4. Compare outputs against the provided chart placeholders  
+
 # 💰 FinanceDemo – 5-Minute Low-Code Finance Demos with Microsoft Fabric  
 
 This repo contains a **tiny Excel dataset (`FinanceDemo.xlsx`)** and **5 simple demos** you can run in under 5 minutes.  
@@ -90,4 +104,27 @@ SQL Aggregation → images/sql_output.png
 Notebook Output → images/notebook_budget_vs_actual.png
 
 👨‍💻 Created by: Olufemi Olamoyegun, FMVA®
+
+
+
+🔹 2. License Section
+
+## 📜 License  
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.  
+MIT License
+
+Copyright (c) 2025 Olufemi Olamoyegun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+[... standard MIT license text continues ...]
+
+
+
 
