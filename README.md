@@ -33,21 +33,22 @@ It’s designed for **finance professionals** and **Fabric beginners** — no ad
 - Create pipeline → schedule refresh on 1st → send Teams alert  
 - ✅ 100% clicks, no coding  
 
-2️⃣ **Budget vs Actual (DAX)**  
-```DAX
+2️⃣# 📊 Budget vs Actual (DAX)
+
+```dax
 Month = FORMAT(Transactions[Date], "MMM YYYY")
 TotalRevenue = SUM(Transactions[Amount])
 RevenueVariance = [TotalRevenue] - SUM(Budget[RevenueBudget])
 
 
 3️⃣ Month-over-Month Growth (DAX)
+
 RevenueMoM =
 DIVIDE(
     SUM(Transactions[Amount]) 
         - CALCULATE(SUM(Transactions[Amount]), PREVIOUSMONTH(Transactions[Date])),
     CALCULATE(SUM(Transactions[Amount]), PREVIOUSMONTH(Transactions[Date]))
 )
-
 
 4️⃣ SQL – Monthly Aggregation
 
@@ -58,6 +59,7 @@ SELECT
 FROM Transactions
 GROUP BY FORMAT(Date,'yyyy-MM'), Category
 ORDER BY Month, Category;
+
 
 
 5️⃣ Notebook – Budget vs Actual (Python)
@@ -79,7 +81,6 @@ plt.bar(df['Month'], df['Amount'], alpha=0.5, label='Actual')
 plt.title('Revenue: Budget vs Actual')
 plt.legend()
 plt.show()
-
 
 
 
