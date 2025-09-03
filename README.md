@@ -44,7 +44,7 @@ Month = FORMAT(Transactions[Date], "MMM YYYY")
 TotalRevenue = SUM(Transactions[Amount])
 RevenueVariance = [TotalRevenue] - SUM(Budget[RevenueBudget])
 
-📸 Placeholder for chart:
+
 
 3️⃣ 📈 Month-over-Month Growth (DAX)
 RevenueMoM =
@@ -54,10 +54,7 @@ DIVIDE(
     CALCULATE(SUM(Transactions[Amount]), PREVIOUSMONTH(Transactions[Date]))
 )
 
-📸 Placeholder for chart:
-
 4️⃣ 🗄️ SQL – Monthly Aggregation
-
 SELECT 
     FORMAT(Date,'yyyy-MM') AS Month,
     Category,
@@ -66,10 +63,7 @@ FROM Transactions
 GROUP BY FORMAT(Date,'yyyy-MM'), Category
 ORDER BY Month, Category;
 
-📸 Placeholder for chart:
-
 5️⃣ 📓 Notebook – Budget vs Actual (Python)
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -88,9 +82,6 @@ plt.title('Revenue: Budget vs Actual')
 plt.legend()
 plt.show()
 
-📸 Placeholder for chart:
-
-
 📊 Final Visual Outputs
 Revenue vs Budget → images/revenue_vs_budget.png
 Expense vs Budget → images/expense_vs_budget.png
@@ -99,6 +90,4 @@ SQL Aggregation → images/sql_output.png
 Notebook Output → images/notebook_budget_vs_actual.png
 
 👨‍💻 Created by: Olufemi Olamoyegun, FMVA®
-
-
 
